@@ -9,7 +9,7 @@ export const caseStudyData = [
         id: 1,
         image: means,
         name: "Means Budgeting Tool",
-        description: "A custom budgeting tool for tracking income and expenses. Built with Vite using Typescript.",
+        description: "A custom budgeting tool for tracking income and expenses. Built with Vite using Typescript, Auth0, and a Node API.",
         link: "https://meansbudget.netlify.app/",
     },
     {
