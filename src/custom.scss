@@ -46,6 +46,10 @@ $btn-text-dark: black;
     color: $text-color-light;
   }
 
+  .card {
+    background-color: $background-color-light;
+  }
+
   .card-body {
     border-color: $text-color-light;
   }
@@ -76,6 +80,10 @@ $btn-text-dark: black;
 
   .custom-heading {
     color: $text-color-dark;
+  }
+
+  .card {
+    background-color: $background-color-dark;
   }
 
   .card-body {
