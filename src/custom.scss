@@ -1,0 +1,158 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+
+// Define your custom SCSS variables
+$primary: black; // Custom primary color
+$background-color-light: #ffffff;
+$text-color-light: #000000;
+$navbar-bg-light: #f8f9fa;
+$btn-bg-light: black;
+$btn-text-light: white;
+
+$background-color-dark: #121212;
+$text-color-dark: #ffffff;
+$navbar-bg-dark: #343a40;
+$btn-bg-dark: white;
+$btn-text-dark: black;
+
+// Import Bootstrap to apply the custom variables
+@import 'bootstrap/scss/bootstrap';
+
+// Custom global styles for light and dark themes
+.app.light {
+  background-color: $background-color-light;
+  color: $text-color-light;
+
+  .navbar {
+    background-color: $navbar-bg-light !important;
+  }
+
+  .btn {
+    background-color: $btn-bg-light;
+    color: $btn-text-light;
+    border-color: $btn-bg-light;
+
+    &:hover {
+      background-color: lighten($btn-bg-light, 10%);
+      border-color: lighten($btn-bg-light, 10%);
+    }
+
+    .back-arrow {
+      color: $btn-text-light;
+    }
+  }
+
+  .custom-heading {
+    color: $text-color-light;
+  }
+
+  .card-body {
+    border-color: $text-color-light;
+  }
+}
+
+.app.dark {
+  background-color: $background-color-dark;
+  color: $text-color-dark;
+
+  .navbar {
+    background-color: $navbar-bg-dark !important;
+  }
+
+  .btn {
+    background-color: $btn-bg-dark;
+    color: $btn-text-dark;
+    border-color: $btn-bg-dark;
+
+    &:hover {
+      background-color: lighten($btn-bg-dark, 10%);
+      border-color: lighten($btn-bg-dark, 10%);
+    }
+
+    .back-arrow {
+      color: $btn-text-dark;
+    }
+  }
+
+  .custom-heading {
+    color: $text-color-dark;
+  }
+
+  .card-body {
+    border-color: $text-color-dark;
+  }
+}
+
+// Global styles for the app
+.app {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  /* Full height of the viewport */
+  display: flex;
+  /* Use flexbox for layout */
+  flex-direction: column;
+  /* Stack children vertically */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  padding: 10px;
+}
+
+.custom-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn-custom {
+  background-color: $primary;
+  border-color: $primary;
+  color: white;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+}
+
+.card {
+  text-align: center;
+}
+
+.case-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.case-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: -webkit-fill-available;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  width: fit-content;
+  max-width: 100%;
+  overflow: visible;
+  text-overflow: initial;
+  padding: 0.5rem 1rem;
+}
+
+.back-arrow {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
