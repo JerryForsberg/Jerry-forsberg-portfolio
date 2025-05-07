@@ -184,7 +184,7 @@ const Home = () => {
                     <h2 className="h4 mb-3">More</h2>
                     <Button
                         variant="outline-secondary"
-                        href="/Jerry-Forsberg.docx"
+                        href="/Jerry Forsberg.docx"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="me-2"
