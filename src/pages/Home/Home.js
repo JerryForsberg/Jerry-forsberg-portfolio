@@ -18,7 +18,7 @@ const Home = () => {
                     <img
                         src={profileImage}
                         alt="Jerry Forsberg"
-                        className="img-fluid mb-3"
+                        className="img-fluid rounded float-left mb-3 me-2"
                         style={{ maxWidth: '200px' }}
                     />
                     <h1 className="custom-heading">Jerry Forsberg – Software Developer</h1>
