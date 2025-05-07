@@ -14,12 +14,12 @@ const Home = () => {
     return (
         <main>
             <Container className="my-5">
-                <header className="text-center mb-4">
+                <header className="text-center mb-4 d-flex flex-row">
                     <img
                         src={profileImage}
                         alt="Jerry Forsberg"
-                        className="img-fluid rounded-circle mb-3"
-                        style={{ maxWidth: '150px' }}
+                        className="img-fluid mb-3"
+                        style={{ maxWidth: '200px' }}
                     />
                     <h1 className="custom-heading">Jerry Forsberg – Software Developer</h1>
                 </header>
@@ -84,8 +84,9 @@ const Home = () => {
                         href="https://github.com/JerryForsberg"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="me-2"
                     >
-                        <FaGithub className="me-2" />
+                        <FaGithub />
                         GitHub
                     </Button>
                     <Button
@@ -93,8 +94,9 @@ const Home = () => {
                         href="https://www.linkedin.com/in/jerry-forsberg/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="me-2"
                     >
-                        <FaLinkedin className="me-2" />
+                        <FaLinkedin />
                         LinkedIn
                     </Button>
                 </section>
