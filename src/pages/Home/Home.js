@@ -42,7 +42,7 @@ const Home = () => {
                         scalable web applications. I have several years of experience using technologies like React, TypeScript, and Node.js. I design intuitive user interfaces and connect them to efficient, secure backend services.
                     </p>
                     <p>
-                        I've worked as a consultant on enterprise projects in a range of industries, from state departments to hospitality and gaming. I have a strong background in both front-end and back-end development, and I enjoy tackling complex problems. My work history includes creating new applications, as well as migrating legacy systems to modern frameworks. While my case studies presented here are fairly simple examples, I have worked on many large-scale projects which I can not share publicly due to NDA restrictions.
+                        I've worked as a consultant on enterprise projects in a range of industries, from state departments to hospitality and gaming. I have a strong background in both front-end and back-end development, and I enjoy tackling complex problems. My work history includes creating new applications, as well as migrating legacy systems to modern frameworks. I also have created and contributed to AI projects, using tools such as semantic kernel, ctransformers, and ollama. While my case studies presented here are fairly simple examples, I have worked on many large-scale projects which I can not share publicly due to NDA restrictions.
                     </p>
                     <p>
                         Feel free to explore my case studies or get in touch through the contact page. I look forward to hearing about your project!
@@ -84,7 +84,7 @@ const Home = () => {
                     <h2 className="h4 mb-3">More</h2>
                     <Button
                         variant="outline-secondary"
-                        href="/Jerry Forsberg.docx"
+                        href="/Jerry-Forsberg.docx"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="me-2"
