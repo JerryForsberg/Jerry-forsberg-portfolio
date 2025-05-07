@@ -1,4 +1,4 @@
-import { Button, Container } from 'react-bootstrap';
+import { Button, Container, Card, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import profileImage from '../../assets/profile-picture.jpg';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -15,13 +15,25 @@ const Home = () => {
         <main>
             <Container className="my-5">
                 <header className="text-center mb-4 d-flex flex-row">
-                    <img
-                        src={profileImage}
-                        alt="Jerry Forsberg"
-                        className="img-fluid rounded float-left mb-3 me-2"
-                        style={{ maxWidth: '200px' }}
-                    />
-                    <h1 className="custom-heading">Jerry Forsberg – Software Developer</h1>
+                    <Card className="mb-4 shadow-sm">
+                        <Card.Body>
+                            <Row className="align-items-center">
+                                <Col xs={12} md="auto" className="text-center mb-3 mb-md-0">
+                                    <img
+                                        src={profileImage}
+                                        alt="Jerry Forsberg"
+                                        className="img-fluid rounded"
+                                        style={{ maxWidth: '150px' }}
+                                    />
+                                </Col>
+                                <Col>
+                                    <Card.Title as="h1" className="custom-heading mb-2">
+                                        Jerry Forsberg – Software Developer
+                                    </Card.Title>
+                                </Col>
+                            </Row>
+                        </Card.Body>
+                    </Card>
                 </header>
 
                 <section className="text-section mb-5">
@@ -86,7 +98,7 @@ const Home = () => {
                         rel="noopener noreferrer"
                         className="me-2"
                     >
-                        <FaGithub />
+                        <FaGithub className="me-2" />
                         GitHub
                     </Button>
                     <Button
@@ -96,7 +108,7 @@ const Home = () => {
                         rel="noopener noreferrer"
                         className="me-2"
                     >
-                        <FaLinkedin />
+                        <FaLinkedin className="me-2" />
                         LinkedIn
                     </Button>
                 </section>
