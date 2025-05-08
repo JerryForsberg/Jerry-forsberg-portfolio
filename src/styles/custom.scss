@@ -386,6 +386,10 @@ body {
   &.navbar-dark {
     .navbar-collapse {
       background-color: $navbar-bg-dark;
+
+      @media (min-width: 768px) {
+        background-color: transparent;
+      }
     }
   }
 }
