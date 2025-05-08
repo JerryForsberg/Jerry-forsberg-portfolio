@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import { useLocation } from 'react-router-dom';
 
 const AppNavbar = ({ toggleTheme, theme }) => {
+  const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setExpanded(false);
+  }, [location]);
+
   return (
-    <Navbar style={{ height: '100px' }} variant={theme} expand="lg" className="px-3 rounded-3 shadow-sm mb-4">
+    <Navbar expanded={expanded} onToggle={() => setExpanded(prev => !prev)} style={{ height: '100px' }} variant={theme} expand="md" className="app-navbar px-3 rounded-3 shadow-sm mb-4">
       <Navbar.Brand href="/">Jerry Forsberg</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ms-auto">
+        <Nav className="ms-auto" onClick={() => setExpanded(false)}>
           <LinkContainer to="/">
             <Nav.Link>Home</Nav.Link>
           </LinkContainer>

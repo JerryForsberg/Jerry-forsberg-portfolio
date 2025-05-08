@@ -366,3 +366,34 @@ body {
     transition: transform 0.3s ease-in-out;
   }
 }
+
+.app-navbar {
+  position: relative;
+  background-color: inherit;
+  z-index: 1040;
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $navbar-bg-light;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+
+    @media (min-width: 768px) {
+      position: static;
+      width: auto;
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  &.navbar-dark {
+    .navbar-collapse {
+      background-color: $navbar-bg-dark;
+    }
+  }
+}
