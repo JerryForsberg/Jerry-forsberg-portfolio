@@ -2,8 +2,7 @@
 @import 'bootstrap/scss/variables';
 @import 'home';
 
-// Define your custom SCSS variables
-$primary: black; // Custom primary color
+$primary: black;
 $background-color-light: #ffffff;
 $text-color-light: #000000;
 $navbar-bg-light: #f8f9fa;
@@ -16,10 +15,8 @@ $navbar-bg-dark: #343a40;
 $btn-bg-dark: rgb(104 193 245 / 98%);
 $btn-text-dark: black;
 
-// Import Bootstrap to apply the custom variables
 @import 'bootstrap/scss/bootstrap';
 
-// Custom global styles for light and dark themes
 .app.light {
   background: linear-gradient(-45deg, #f0f4ff, #e6e9f0, #f3e2e2, #dce3f2);
   background-size: 400% 400%;
@@ -228,15 +225,10 @@ $btn-text-dark: black;
   }
 }
 
-// Global styles for the app
 .app {
-  // transition: background-color 0.3s ease, color 0.3s ease;
   min-height: 100vh;
-  /* Full height of the viewport */
   display: flex;
-  /* Use flexbox for layout */
   flex-direction: column;
-  /* Stack children vertically */
 }
 
 body {

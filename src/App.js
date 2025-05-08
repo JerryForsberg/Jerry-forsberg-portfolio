@@ -17,7 +17,7 @@ function App() {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
   return (
-    <div className={`app ${theme}`}> {/* Apply theme class */}
+    <div className={`app ${theme}`}>
       <Container>
         <AppNavbar toggleTheme={toggleTheme} theme={theme} />
         <Routes>

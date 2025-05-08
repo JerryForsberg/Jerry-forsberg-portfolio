@@ -1,10 +1,9 @@
-// Full homepage redesign with hero, skills, and case study CTA
 import { useEffect } from 'react';
 import { Container, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import profileImage from '../../assets/profile-picture.jpg';
-import { groupedSkills } from '../../data/skills'; // Assumes groupedSkills is structured appropriately
+import { groupedSkills } from '../../data/skills';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -37,7 +36,6 @@ const Home = () => {
             container.classList.remove('dragging');
         };
 
-
         const mouseUp = () => {
             isDown = false;
             container.classList.remove('dragging');
@@ -52,7 +50,7 @@ const Home = () => {
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - container.offsetLeft;
-            const walk = (x - startX) * 2; // Adjust scroll speed
+            const walk = (x - startX) * 2;
             container.scrollLeft = scrollLeft - walk;
         };
 
@@ -60,7 +58,7 @@ const Home = () => {
             if (!isDown) return;
             e.preventDefault();
             const x = e.touches[0].pageX - container.offsetLeft;
-            const walk = (x - startX) * 2; // Adjust scroll speed
+            const walk = (x - startX) * 2;
             container.scrollLeft = scrollLeft - walk;
         }
 
@@ -123,7 +121,7 @@ const Home = () => {
                     <div className="skills-scroll-wrapper d-flex align-items-center">
                         <button className="scroll-arrow left" onClick={() => scrollByAmount(-400)}>‹</button>
 
-                        <div className="skills-scroll-container" id="skills-scroll">
+                        <div className="skills-scroll-container flex-grow-1" id="skills-scroll">
                             {groupedSkills.flatMap(group => group.skills).map(({ name, icon, color }) => (
                                 <div key={name} className="skill-card text-center">
                                     <div className="icon" style={{ color }}>{icon}</div>
@@ -152,150 +150,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { Button, Container, Col, Row } from 'react-bootstrap';
-// import { useNavigate } from 'react-router-dom';
-// import profileImage from '../../assets/profile-picture.jpg';
-// import { FaGithub, FaLinkedin } from 'react-icons/fa';
-
-
-
-
-// const Home = () => {
-//     const navigate = useNavigate();
-
-//     const handleBtnClick = () => {
-//         navigate('/caseStudies');
-//     };
-
-
-
-//     return (
-//         <main>
-//             <Container className="my-5">
-//                 <Row className="mb-5">
-//                     <Col>
-//                         <div>
-//                             <img
-//                                 src={profileImage}
-//                                 alt="Jerry Forsberg"
-//                                 className="animate-fade-in float-start rounded-img me-3 mb-3 rounded-circle"
-//                             />
-//                             <div className='animate-fade-in' style={{ flex: '1 1 0', minWidth: 0, maxWidth: '100%' }}>
-//                                 <h1 className="mb-4" >Software Developer</h1>
-
-//                                 <p>
-//                                     I am a full-stack software developer, focused on building responsive,
-//                                     scalable web and mobile applications. I have several years of experience using technologies like React, TypeScript, and Node.js. I take design frameworks and create intuitive user interfaces and connect them to efficient, secure backend services.
-//                                 </p>
-//                                 <p>
-//                                     I've worked on enterprise projects in a range of industries, from government to hospitality/gaming. I have a strong background in both front-end and back-end development, and I enjoy tackling complex problems. My work history includes creating new applications, as well as migrating legacy systems to modern frameworks. I also have created and contributed to AI projects, using tools such as semantic kernel, ctransformers, and ollama. While my case studies presented here are fairly simple examples, I have worked on many large-scale projects which I can not share publicly due to NDA restrictions.
-//                                 </p>
-//                                 <p>
-//                                     Feel free to explore my case studies or get in touch through the contact page. I look forward to hearing about your project!
-//                                 </p>
-//                                 <Button className='mt-2' onClick={handleBtnClick}>See case studies</Button>
-//                             </div>
-//                         </div>
-
-//                     </Col>
-//                 </Row>
-
-//                 <section aria-label="Skills" className="mb-5 animate-fade-in">
-//                     <h2 className="h4 mb-3">Core Skills</h2>
-//                     <ul className="list-inline">
-//                         <section className="skills-grid text-center">
-//                             <div className="row">
-//                                 {groupedSkills.flatMap(({ category, skills }) =>
-//                                     skills.map(({ name, icon, color }) => (
-//                                         <div key={name} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-3">
-//                                             <div className="d-flex flex-column align-items-center">
-//                                                 <div style={{ fontSize: '1.5rem', color }}>{icon}</div>
-//                                                 <small>{name}</small>
-//                                             </div>
-//                                         </div>
-//                                     ))
-//                                 )}
-//                             </div>
-//                         </section>
-
-//                     </ul>
-//                 </section>
-
-//                 <section className="mb-3 animate-fade-in">
-//                     <h2 className="h4 mb-3">More</h2>
-//                     <Button
-//                         variant="outline-secondary"
-//                         href="/Jerry Forsberg.docx"
-//                         target="_blank"
-//                         rel="noopener noreferrer"
-//                         className="me-2"
-//                     >
-//                         View Resume
-//                     </Button>
-//                     <Button
-//                         variant="outline-dark"
-//                         href="https://github.com/JerryForsberg"
-//                         target="_blank"
-//                         rel="noopener noreferrer"
-//                         className="me-2"
-//                     >
-//                         <FaGithub className="me-2" />
-//                         GitHub
-//                     </Button>
-//                     <Button
-//                         variant="outline-dark"
-//                         href="https://www.linkedin.com/in/jerry-forsberg/"
-//                         target="_blank"
-//                         rel="noopener noreferrer"
-//                         className="me-2"
-//                     >
-//                         <FaLinkedin className="me-2" />
-//                         LinkedIn
-//                     </Button>
-//                 </section>
-//             </Container>
-//         </main>
-//     );
-
-
-// };
-
-// export default Home;

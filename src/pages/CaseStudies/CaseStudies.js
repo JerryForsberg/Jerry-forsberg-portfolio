@@ -1,6 +1,6 @@
 import { Row, Col, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { caseStudyData } from "../../data/caseStudyData"; // Adjust the import path as necessary
+import { caseStudyData } from "../../data/caseStudyData";
 
 const CaseStudies = () => {
   const navigate = useNavigate();
@@ -16,8 +16,8 @@ const CaseStudies = () => {
           <Col xs={12} sm={6} md={4} lg={4} key={caseItem.id}>
             <Card
               className="mb-4 h-100 clickable-card"
-              onClick={() => handleCardClick(caseItem)} // Add click handler
-              style={{ cursor: "pointer" }} // Add pointer cursor for better UX
+              onClick={() => handleCardClick(caseItem)}
+              style={{ cursor: "pointer" }}
             >
               {caseItem.image && (
                 <Card.Img variant="top" src={caseItem.image} alt={caseItem.name} />
