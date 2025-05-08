@@ -11,33 +11,38 @@ export const caseStudyData = [
         name: "Means Budgeting Tool",
         description: "A custom budgeting tool for tracking income and expenses. Built with Vite using Typescript, Auth0, and a Node API.",
         link: "https://meansbudget.netlify.app/",
+        gitLink: "https://github.com/JerryForsberg/means"
     },
     {
         id: 2,
         image: employeeDirectory,
         name: "Employee Directory",
-        description: "A search tool for finding employees.",
+        description: "A search tool for finding employees. Written in React using class based components, using axios for external API calls.",
         link: "https://jf-employee-directory.netlify.app/",
+        gitLink: "https://github.com/JerryForsberg/jf_employee_directory"
     },
     {
         id: 3,
         image: lyricsToGo,
         name: "Lyrics To Go",
-        description: "A way to find the lyrics of your favorite songs using 3rd party APIs.",
+        description: "A way to find the lyrics of your favorite songs using 3rd party APIs. Written in vanilla JS, HTML, and SCSS using ajax for API calls.",
         link: "https://lyrics-to-go.netlify.app/",
+        gitLink: "https://github.com/yuliatikhonova/Lyrics-To-Go"
     },
     {
         id: 4,
         image: teamGenerator,
         name: "Team Generator",
-        description: "A simple console app to build teams within your company.",
+        description: "A simple console app to build teams within your company. Written using vanilla JS, and HTML using inquirer for user input and FS for writing files.",
         link: "https://jfteamgenerator.netlify.app/",
+        gitLink: "https://github.com/JerryForsberg/JFTeamGenerator"
     },
     {
         id: 5,
         image: yaMaker,
         name: "Handcrafted Heirloom",
-        description: "An e-commerce site for a bespoke furniture and woodworking store. No longer hosted, please see link for details.",
+        description: "A full stack e-commerce site for a bespoke furniture and woodworking store. Built with React, Sequelize, 3rd party resources for file storage, and Passport for authentication.",
         link: "https://github.com/yuliatikhonova/Y.A.MAKER/blob/master/README.md",
+        gitLink: "https://github.com/yuliatikhonova/Y.A.MAKER/tree/master"
     },
 ];

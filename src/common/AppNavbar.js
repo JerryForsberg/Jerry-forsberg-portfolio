@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const AppNavbar = ({ toggleTheme, theme }) => {
   return (
-    <Navbar bg={theme === 'light' ? 'light' : 'dark'} variant={theme} expand="lg" className="px-3 rounded-3">
+    <Navbar style={{ height: '100px' }} variant={theme} expand="lg" className="px-3 rounded-3 shadow-sm mb-4">
       <Navbar.Brand href="/">Jerry Forsberg</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

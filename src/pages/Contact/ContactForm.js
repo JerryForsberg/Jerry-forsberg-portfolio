@@ -47,7 +47,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Row className="justify-content-md-center my-5">
+    <Row className="justify-content-md-center my-5 animate-fade-in">
       <Col md={6}>
         <h2>Contact</h2>
         {submitted && <Alert variant="success">Your message has been sent successfully!</Alert>}

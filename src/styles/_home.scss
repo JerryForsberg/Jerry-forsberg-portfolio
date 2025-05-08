@@ -1,0 +1,126 @@
+// Homepage visual style system for redesigned portfolio
+
+.homepage-section {
+
+    h1,
+    h2 {
+        color: #485fe8;
+    }
+
+    .btn-primary {
+        background-color: #485fe8;
+        border-color: #485fe8;
+
+        &:hover {
+            background-color: darken(#485fe8, 8%);
+            border-color: darken(#485fe8, 8%);
+        }
+    }
+}
+
+.hero-img {
+    width: 140px;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid #ccc;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20% !important;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 576px) {
+        margin: 0 auto;
+    }
+}
+
+.hero-text {
+    max-width: 600px;
+
+    h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    p {
+        font-size: clamp(1rem, 2.2vw, 1.25rem);
+    }
+}
+
+.skills-scroll-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.skills-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 0.5rem 0;
+
+    // Hide scrollbars
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scroll-arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 0.5rem;
+
+    &:hover {
+        color: #485fe8;
+    }
+}
+
+.skill-card {
+    flex: 0 0 auto;
+    width: 120px;
+    min-height: 100px;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .icon {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+@media (max-width: 768px) {
+    .homepage-section {
+        text-align: center;
+    }
+
+    .hero-text {
+        align-items: center;
+    }
+}

@@ -10,7 +10,7 @@ const CaseStudies = () => {
   };
 
   return (
-    <div className="custom-container w-100 my-5">
+    <div className="custom-container w-100 my-5 animate-fade-in">
       <Row className="g-4">
         {caseStudyData.map((caseItem) => (
           <Col xs={12} sm={6} md={4} lg={4} key={caseItem.id}>
