@@ -100,12 +100,11 @@ const Home = () => {
                     <div className="hero-text">
                         <h1 className="display-4 fw-bold">Jerry Forsberg</h1>
                         <p className="lead">
-                            Full-stack software developer focused on responsive, scalable web apps. Experienced in React,
-                            TypeScript, and Node.js, with a passion for elegant UI and efficient backend architecture.
+                            Full-stack software developer interested in creating responsive, scalable web apps. Experienced in developing enterprise applications in React, TypeScript, and Node.js.
                         </p>
                         <div className="d-flex flex-wrap gap-2 mt-3">
                             <Button onClick={handleBtnClick} variant="primary">View Case Studies</Button>
-                            <Button variant="outline-secondary" href="/Jerry Forsberg.docx" target="_blank">View Resume</Button>
+                            <Button variant="outline-secondary" href="/Jerry Forsberg.docx" target="_blank">Download Resume</Button>
                             <Button variant="dark" href="https://github.com/JerryForsberg" target="_blank">
                                 <FaGithub className="me-2" /> GitHub
                             </Button>
