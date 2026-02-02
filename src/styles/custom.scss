@@ -1,120 +1,16 @@
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
-@import 'home';
 
-$primary: black;
-$background-color-light: #ffffff;
-$text-color-light: #000000;
-$navbar-bg-light: #f8f9fa;
-$btn-bg-light: #485fe8;
-$btn-text-light: white;
+$primary: #68c1f5;
 
 $background-color-dark: #121212;
 $text-color-dark: #ffffff;
 $navbar-bg-dark: #343a40;
 $btn-bg-dark: rgb(104 193 245 / 98%);
-$btn-text-dark: black;
+$btn-text-dark: #0d1117;
 
+@import 'home';
 @import 'bootstrap/scss/bootstrap';
-
-.app.light {
-  background: linear-gradient(-45deg, #f0f4ff, #e6e9f0, #f3e2e2, #dce3f2);
-  background-size: 400% 400%;
-  animation: gradientShift 12s ease infinite;
-  color: #333;
-
-  @keyframes gradientShift {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  h1,
-  h2 {
-    color: $btn-bg-light;
-  }
-
-
-  .btn {
-    background-color: $btn-bg-light;
-    color: $btn-text-light;
-    border-color: $btn-bg-light;
-
-    &:hover {
-      background-color: lighten($btn-bg-light, 10%);
-      border-color: lighten($btn-bg-light, 10%);
-    }
-
-    .back-arrow {
-      color: $btn-text-light;
-    }
-  }
-
-  .custom-heading {
-    color: $text-color-light;
-  }
-
-  .card {
-    background-color: $background-color-light;
-  }
-
-  .card-body {
-    border-color: $text-color-light;
-  }
-
-  .card-title {
-    color: $btn-bg-light;
-  }
-
-  .card-text {
-    color: $text-color-light;
-  }
-
-  .nav-link {
-    &:hover {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    }
-  }
-
-  .navbar-brand {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
-    &:hover {
-      transform: translateY(-2px) scale(1.03);
-      border-radius: 0.5rem;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    }
-  }
-
-  .navbar {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-  }
-
-  .scroll-arrow {
-    color: #333;
-
-    &:hover {
-      color: $btn-bg-light;
-    }
-  }
-
-  .case-img {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.39);
-  }
-
-  .git-link {
-    color: $btn-bg-light;
-    font-size: 2rem;
-  }
-}
 
 .app.dark {
   background: linear-gradient(-45deg, #0e0e0f, #36373b, #3d3131, #272b2e);
@@ -145,7 +41,7 @@ $btn-text-dark: black;
 
   .btn {
     background-color: $btn-bg-dark;
-    color: $text-color-dark;
+    color: $btn-text-dark;
     border-color: $btn-bg-dark;
 
     &:hover {
@@ -155,7 +51,7 @@ $btn-text-dark: black;
     }
 
     .back-arrow {
-      color: $text-color-dark;
+      color: $btn-text-dark;
     }
   }
 
@@ -204,7 +100,7 @@ $btn-text-dark: black;
   }
 
   small {
-    color: $text-color-light;
+    color: #bfc6d1;
   }
 
   .scroll-arrow {
@@ -233,6 +129,8 @@ $btn-text-dark: black;
 
 body {
   font-family: 'Arial', sans-serif;
+  background-color: $background-color-dark;
+  color: $text-color-dark;
 }
 
 .btn {
@@ -257,7 +155,7 @@ body {
 .btn-custom {
   background-color: $primary;
   border-color: $primary;
-  color: white;
+  color: $btn-text-dark;
 
   &:hover {
     background-color: darken($primary, 10%);
@@ -348,7 +246,7 @@ body {
 
 .case-img {
   max-width: 100%;
-  height: "auto";
+  height: auto;
   border-radius: 20px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
@@ -369,7 +267,7 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: $navbar-bg-light;
+    background-color: $navbar-bg-dark;
     padding: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
@@ -383,13 +281,4 @@ body {
     }
   }
 
-  &.navbar-dark {
-    .navbar-collapse {
-      background-color: $navbar-bg-dark;
-
-      @media (min-width: 768px) {
-        background-color: transparent;
-      }
-    }
-  }
 }

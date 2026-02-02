@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/custom.scss'
-import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import AppNavbar from './common/AppNavbar'
@@ -11,15 +10,10 @@ import CaseDetails from './pages/CaseStudies/CaseDetails';
 
 function App() {
 
-  const [theme, setTheme] = useState('light'); // State to manage theme
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
   return (
-    <div className={`app ${theme}`}>
+    <div className="app dark">
       <Container>
-        <AppNavbar toggleTheme={toggleTheme} theme={theme} />
+        <AppNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/caseStudies" element={<CaseStudies />} />

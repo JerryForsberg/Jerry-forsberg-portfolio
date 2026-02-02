@@ -2,16 +2,16 @@
 
     h1,
     h2 {
-        color: #485fe8;
+        color: $btn-bg-dark;
     }
 
     .btn-primary {
-        background-color: #485fe8;
-        border-color: #485fe8;
+        background-color: $btn-bg-dark;
+        border-color: $btn-bg-dark;
 
         &:hover {
-            background-color: darken(#485fe8, 8%);
-            border-color: darken(#485fe8, 8%);
+            background-color: darken($btn-bg-dark, 8%);
+            border-color: darken($btn-bg-dark, 8%);
         }
     }
 }
@@ -82,9 +82,10 @@
     width: 120px;
     min-height: 100px;
     padding: 1rem;
-    background-color: #f8f9fa;
+    background-color: #1f1f23;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    color: #e7e9f3;
     transition: transform 0.3s ease;
 
     &:hover {
@@ -94,6 +95,7 @@
     .icon {
         font-size: 1.8rem;
         margin-bottom: 0.5rem;
+        color: $btn-bg-dark;
     }
 }
 
@@ -103,7 +105,7 @@ section {
     padding-bottom: 3rem;
 
     &:not(:last-child) {
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #2d2d35;
     }
 }
 
